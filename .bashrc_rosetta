@@ -1,0 +1,29 @@
+## Added by YYY for rosetta
+# This dir "rosetta_bin_3.8" is a precompiled version of rosetta_linux 
+# that directly unpackaged from the downloaded file.
+# Instead, the "rosetta_3.8" is a version compiled from its source code
+# package. 
+PATH=/usr/local/rosetta_bin_3.8/main/source/bin:$PATH
+export ROSETTA3=/usr/local/rosetta_bin_3.8/main/
+# export PHENIX_ROSETTA_PATH=/usr/local/rosetta_bin_3.8
+export PHENIX_ROSETTA_PATH=$ROSETTA3/source/bin
+export ROSETTA_BIN=$ROSETTA3/source/bin
+export ROSETTA3_DB=$ROSETTA3/database
+export ROSETTA3_TOOLS=/usr/local/rosetta_bin_3.8/tools
+export ROSETTA_DEMO=/usr/local/rosetta_bin_3.8/demos/tutorials
+
+#Added by YYY for mpich, 2017.12.22
+PATH=/root/mpich/bin:$PATH
+LD_LIBRARY_PATH=/root/mpich/lib/:$LD_LIBRARY_PATH
+export PATH LD_LIBRARY_PATH
+
+
+# added by YYY for PYMOL2
+
+export PATH=/usr/local/pymol2/bin:$PATH
+
+# added by Anaconda3 installer
+export PATH="/opt/anaconda3/bin:$PATH"
+
+# alias for PyRosetta-server, just execute it in bash, this will make rosetta visualized!
+alias pymol2rosetta='pymol $ROSETTA3/source/src/python/PyRosetta/src/PyMOL-RosettaServer.py'
