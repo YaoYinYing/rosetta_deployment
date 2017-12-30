@@ -1,3 +1,7 @@
+# Export the PGCC(OpenACC) for GPU parallel computing. 
+# Added by YYY at 2017.12.19
+export PATH=/opt/pgi/linux86-64/2017/bin:$PATH
+
 ## Added by YYY for rosetta
 # This dir "rosetta_bin_3.8" is a precompiled version of rosetta_linux 
 # that directly unpackaged from the downloaded file.
@@ -16,14 +20,19 @@ export ROSETTA_DEMO=/usr/local/rosetta_bin_3.8/demos/tutorials
 PATH=/root/mpich/bin:$PATH
 LD_LIBRARY_PATH=/root/mpich/lib/:$LD_LIBRARY_PATH
 export PATH LD_LIBRARY_PATH
+# Added by YYY for openmpi
 
-
+export LD_LIBRARY_PATH=/usr/local/lib/openmpi:$LD_LIBRARY_PATH
+export PATH=/usr/local/bin:$PATH
 # added by YYY for PYMOL2
 
 export PATH=/usr/local/pymol2/bin:$PATH
 
 # added by Anaconda3 installer
-export PATH="/opt/anaconda3/bin:$PATH"
+#export PATH="/opt/anaconda3/bin:$PATH"
 
 # alias for PyRosetta-server, just execute it in bash, this will make rosetta visualized!
 alias pymol2rosetta='pymol $ROSETTA3/source/src/python/PyRosetta/src/PyMOL-RosettaServer.py'
+
+
+export PATH LD_LIBRARY_PATH
